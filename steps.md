@@ -24,20 +24,16 @@ Do not use this lab against systems you do not own. Run it only in your own Dock
 
 ---
 
-## Quick path (after clone)
+## Quick path
 
-Do these from the folder that contains `docker-compose.yml` and `WeGIA/` (same level).
-
-### 1. Get WeGIA at the vulnerable commit
-
-If `WeGIA/` is not already in your clone:
+### 1. Clone this repository
 
 ```bash
-git clone https://github.com/nilsonmori/WeGIA.git WeGIA
-cd WeGIA && git checkout 87e49208 && cd ..
+git clone https://github.com/samiodeh35/cs4177-wegie-lab.git
+cd cs4177-wegie-lab
 ```
 
-Why `87e49208`: `dependente_documento.php` concatenates `id_dependente` into SQL (UNION injection). Current `main` is patched.
+Do the next steps from the folder that contains `docker-compose.yml` and `WeGIA/` (same level).
 
 ### 2. Start containers
 
@@ -55,7 +51,7 @@ You want `wegia-web` and `wegia-db` **running**. The SQL import script talks to 
 
 ### 3. First-time database (installer)
 
-Open: **http://127.0.0.1:8080/WeGIA/instalador/index.php**
+Open: **h**
 
 | Field (Portuguese) | Value |
 |--------------------|--------|
@@ -66,9 +62,13 @@ Open: **http://127.0.0.1:8080/WeGIA/instalador/index.php**
 | Caminho para a pasta de Backups | `/tmp` |
 | Domínio do site (url) | `http://127.0.0.1:8080/WeGIA/` |
 
-If you are re-running and the DB already exists, check **Reinstalar base de dados** so scripts re-import.
+If you see:
 
-**If login fails or pages are empty** (containers must be up first):
+Base de dados já existe!
+
+You're all set!
+
+Next run:
 
 ```bash
 ./docker/import-wegia-sql.sh
