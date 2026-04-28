@@ -16,6 +16,22 @@ Do not use this lab against systems you do not own. Run it only in your own Dock
 | **Git** | Clone this repo and WeGIA |
 | **John the Ripper** | Crack extracted hashes offline (optional for the injection demo alone) |
 
+### Docker install (simple)
+
+1. **Windows (10/11):** install Docker Desktop  
+   <https://docs.docker.com/desktop/setup/install/windows-install/>
+2. **Mac (Intel or Apple Silicon):** install Docker Desktop  
+   <https://docs.docker.com/desktop/setup/install/mac-install/>
+3. **Linux:** install Docker Engine + Compose plugin  
+   <https://docs.docker.com/engine/install/>
+4. Restart your computer after install.
+5. Verify in terminal:
+
+```bash
+docker --version
+docker compose version
+```
+
 **John the Ripper**
 
 - macOS: `brew install john-jumbo`
